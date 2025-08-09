@@ -20,4 +20,11 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
+    private static int count; //инициализация счетчика кликов как поля класса MainWindow
+    protected void Button_Click(object sender, RoutedEventArgs e)
+    {
+        count++; 
+        Button button = (Button)sender;
+        ResultText.Text = $"{count}";
+    }
 }
